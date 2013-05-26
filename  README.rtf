@@ -1,0 +1,43 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs26 \cf0 In this project you will implement a simulation of an ocean containing sharks\
+and fish.  You will also write code to convert an ocean into a run-length\
+encoding and back.  The ocean is rectangular, but the edges are connected\
+together in a topological donut or torus.  This means that the top (North) and\
+bottom (South) edges are considered adjacent, so if you start at the top edge\
+and go up, you'll be at the bottom edge (just like in the video game\
+Asteroids).  Similarly, the East and West edges are connected (just like in\
+Pac Man).  The ocean is divided into square cells, which are indexed as follows\
+(for a 4x3 ocean):\
+\
+                         ------> x\
+\
+                     |   -----------------------------\
+                     |   | 0, 0 | 1, 0 | 2, 0 | 3, 0 |\
+                   y |   -----------------------------\
+                     |   | 0, 1 | 1, 1 | 2, 1 | 3, 1 |\
+                     v   -----------------------------\
+                         | 0, 2 | 1, 2 | 2, 2 | 3, 2 |\
+                         -----------------------------\
+\
+Note that the origin is in the upper left; the x-coordinate increases as you\
+move right, and the y-coordinate increases as you go down.  (This conforms to\
+Java's graphics commands, though you won't need to use them directly in this\
+project.)  You can also refer to locations such as (4, 0) or (-4, 3), which are\
+both the same as (0, 0) in a 4x3 ocean.  (More generally, the coordinates in\
+an ixj ocean are taken modulo i for the x-coordinate, which is horizontal, and\
+modulo j for the y-coordinate, which is vertical.)  Any pair of integers will\
+give you a valid position in the grid by "wrapping around" at the edges.\
+\
+(Hint:  programming will be a lot easier if you write helper functions that do\
+the wrapping around for you, and use them in all your methods, so you don't\
+have to think about it again.)\
+\
+There are two kinds of entities in this ocean:  sharks and fish.  The sharks\
+and fish breed, eat, and die in the ocean.  Each cell of the grid can be\
+occupied by a single shark or fish, or it can be empty.}
